@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html ng-app ="myFirstApp">
+<html ng-app ="LunchChecker">
   <head>
     <meta charset="utf-8">
     <script src="angular.js"></script>
     <script src="app.js"></script>
-    <title></title>
+    <title>Lunch Checker</title>
   </head>
   <body>
+    <h2> Lunch Checker </h2>
     <div ng-controller = "firstController">
-      <input type="text" ng-model = "name" ng-blur = "upper()">
-      {{$scope.name}}
+      <h3> Enter Lunch Items below: </h3>
+      <input type="text" ng-model = "itemsList">
+      <div>
+      <button type="button" ng-model = "itemsList" ng-click = countItems() >Check if too much!</button>
+      </div>
+      {{output}}
+      <h4> Empty items will be ignored </h4>
     </div>
   </body>
 </html>
